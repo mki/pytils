@@ -21,10 +21,10 @@ def print_(s):
 # выход - str, а в детранслитерации -- наоборот
 #
 
-print_(translit.translify(u"Это тест и ничего более"))
+print_(translit.translify("Это тест и ничего более"))
 #-> Eto test i nichego bolee
 
-print_(translit.translify(u"Традиционно сложные для транслитерации буквы - подъезд, щука"))
+print_(translit.translify("Традиционно сложные для транслитерации буквы - подъезд, щука"))
 #-> Traditsionno slozhnyie dlya transliteratsii bukvyi - pod`ezd, schuka
 
 # и теперь пытаемся вернуть назад... (понятно, что Э и Е получаются одинаково)
@@ -37,7 +37,7 @@ print_(translit.detranslify("Traditsionno slozhnyie dlya transliteratsii bukvyi 
 
 # и пригодные для url и названий каталогов/файлов транслиты
 # dirify и slugify -- синонимы, действия абсолютно идентичны
-print_(translit.slugify(u"Традиционно сложные для транслитерации буквы - подъезд, щука"))
+print_(translit.slugify("Традиционно сложные для транслитерации буквы - подъезд, щука"))
 #-> traditsionno-slozhnyie-dlya-transliteratsii-bukvyi-podezd-schuka
 
 # обратного преобразования, понятно, нет :)
