@@ -44,7 +44,7 @@ class TranslitTestCase(unittest.TestCase):
         """
         Unit-test for testing translify's exceptions
         """
-        self.assertRaises(ValueError, pytils.translit.translify, u'\u00bfHabla espa\u00f1ol?')
+        self.assertRaises(ValueError, pytils.translit.translify, '\u00bfHabla espa\u00f1ol?')
 
     def testDetransliteration(self):
         """
@@ -70,7 +70,7 @@ class TranslitTestCase(unittest.TestCase):
         """
         self.ckSlug("ТеСт", 'test')
         self.ckSlug("Проверка связи", 'proverka-svyazi')
-        self.ckSlug("me&yo", 'me-and-you')
+        self.ckSlug("me&yo", 'me-and-yo')
         self.ckSlug("и еще один тест", 'i-esche-odin-test')
 
     def testSlugExceptions(self):

@@ -178,7 +178,7 @@ def ru_strftime(format="%d.%m.%Y", date=None, inflected=False, inflected_day=Fal
     """
     Russian strftime without locale
 
-    @param format: strftime format, default=u'%d.%m.%Y'
+    @param format: strftime format, default='%d.%m.%Y'
     @type format: C{unicode}
 
     @param date: date value, default=None translates to today
@@ -209,13 +209,13 @@ def ru_strftime(format="%d.%m.%Y", date=None, inflected=False, inflected_day=Fal
     
     # for russian typography standard,
     # 1 April 2007, but 01.04.2007
-    if u'%b' in format or u'%B' in format:
-        format = format.replace(u'%d', six.text_type(date.day))
+    if '%b' in format or '%B' in format:
+        format = format.replace('%d', six.text_type(date.day))
 
-    format = format.replace(u'%a', prepos+DAY_NAMES[weekday][0])
-    format = format.replace(u'%A', prepos+DAY_NAMES[weekday][day_idx])
-    format = format.replace(u'%b', MONTH_NAMES[date.month-1][0])
-    format = format.replace(u'%B', MONTH_NAMES[date.month-1][month_idx])
+    format = format.replace('%a', prepos+DAY_NAMES[weekday][0])
+    format = format.replace('%A', prepos+DAY_NAMES[weekday][day_idx])
+    format = format.replace('%b', MONTH_NAMES[date.month-1][0])
+    format = format.replace('%B', MONTH_NAMES[date.month-1][month_idx])
 
     # Python 2: strftime's argument must be str
     # Python 3: strftime's argument str, not a bitestring
